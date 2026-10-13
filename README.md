@@ -1,3 +1,2 @@
 # ELRN
-
-[![Open in Bolt](https://bolt.new/static/open-in-bolt.svg)](https://bolt.new/~/sb1-c1qtfyat)
+https://elrn-emergency-opera-9ze9.bolt.host/

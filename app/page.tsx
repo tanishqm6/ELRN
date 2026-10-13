@@ -67,11 +67,14 @@ export default function OverviewPage() {
                 </p>
                 <p className="mt-3 text-[11px] text-[#5d7694]">Illustrative field conditions · Indore response zone</p>
               </div>
-              <div className="hidden h-[132px] w-[190px] shrink-0 items-center justify-center border-l border-primary/10 bg-[#e4edf7] md:flex">
-                <div className="relative flex h-[92px] w-[100px] items-end justify-center text-primary/70">
-                  <RadioTower className="h-[78px] w-[78px]" strokeWidth={1.1} />
-                  <div className="absolute bottom-1 h-2 w-24 rounded-full bg-primary/10 blur-sm" />
-                </div>
+              <div className="relative hidden h-[132px] w-[190px] shrink-0 overflow-hidden border-l border-primary/10 bg-[#e4edf7] md:block">
+                <img
+                  src="https://images.pexels.com/photos/14938295/pexels-photo-14938295.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+                  alt="Illustrative communications tower"
+                  className="h-full w-full object-cover grayscale-[20%] opacity-75"
+                />
+                <div className="absolute inset-0 bg-[#dce8f5]/35 mix-blend-multiply" />
+                <span className="absolute bottom-2 left-3 rounded bg-white/80 px-1.5 py-0.5 text-[9px] font-medium uppercase tracking-[0.12em] text-[#4d6784]">Illustrative</span>
               </div>
             </div>
           </section>

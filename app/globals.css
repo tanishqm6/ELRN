@@ -41,6 +41,7 @@
   }
   html {
     background: #f7f8fa;
+    scroll-behavior: smooth;
   }
 
   body {
@@ -49,6 +50,16 @@
     font-variation-settings: 'opsz' 32;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.16);
+    color: hsl(var(--foreground));
   }
 }
 

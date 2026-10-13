@@ -19,8 +19,6 @@ import {
   ArrowRight,
   ChevronRight,
   Clock3,
-  Wifi,
-  WifiOff,
 } from 'lucide-react';
 import { useAppState } from '@/lib/state';
 import type { Incident } from '@/lib/types';

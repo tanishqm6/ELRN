@@ -54,9 +54,9 @@ export function Sidebar() {
                 router.push(item.href);
               }}
               className={cn(
-                'flex items-center gap-2.5 rounded-md px-3 py-2 text-[13px] font-medium transition-colors',
+                'relative flex items-center gap-2.5 rounded-md px-3 py-2.5 text-[13px] font-medium transition-all duration-200',
                 isActive
-                  ? 'bg-primary/8 text-primary'
+                  ? 'bg-primary/10 text-primary before:absolute before:left-0 before:top-2 before:h-5 before:w-0.5 before:rounded-full before:bg-primary'
                   : 'text-muted-foreground hover:bg-accent hover:text-foreground'
               )}
             >
@@ -134,9 +134,9 @@ export function MobileNav({ open, onClose }: { open: boolean; onClose: () => voi
                   onClose();
                 }}
                 className={cn(
-                  'flex items-center gap-2.5 rounded-md px-3 py-2 text-[13px] font-medium transition-colors',
+                  'relative flex items-center gap-2.5 rounded-md px-3 py-2.5 text-[13px] font-medium transition-all duration-200',
                   isActive
-                    ? 'bg-primary/8 text-primary'
+                    ? 'bg-primary/10 text-primary before:absolute before:left-0 before:top-2 before:h-5 before:w-0.5 before:rounded-full before:bg-primary'
                     : 'text-muted-foreground hover:bg-accent hover:text-foreground'
                 )}
               >

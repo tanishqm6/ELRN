@@ -91,7 +91,7 @@ export function Topbar({
             <Button
               variant="ghost"
               size="icon"
-              className="h-9 w-9 relative"
+              className="relative h-9 w-9 rounded-md border border-border/80 bg-card shadow-sm transition-colors hover:border-primary/30 hover:bg-primary/5"
               onClick={() => setNotifOpen(!notifOpen)}
               onBlur={() => setTimeout(() => setNotifOpen(false), 200)}
             >
@@ -131,14 +131,14 @@ export function Topbar({
             <span className="text-[11px] text-muted-foreground/70 mt-1 font-mono">{timeStr}</span>
           </div>
 
-          <Badge variant="outline" className="hidden sm:inline-flex items-center gap-1 border-success/30 text-success text-[11px] py-1">
+          <Badge variant="outline" className="hidden items-center gap-1 rounded-md border-success/25 bg-success/5 py-1 text-[11px] text-success sm:inline-flex">
             <RadioTower className="h-3 w-3" />
             Operational
           </Badge>
 
           <Button
             size="sm"
-            className="h-9 bg-destructive hover:bg-destructive/90 text-[13px] font-medium"
+            className="h-9 rounded-md bg-destructive px-3 text-[13px] font-medium shadow-sm transition-all hover:-translate-y-px hover:bg-destructive/90 hover:shadow-md"
             onClick={() => setSosOpen(true)}
           >
             <AlertTriangle className="h-3.5 w-3.5 mr-1.5" />

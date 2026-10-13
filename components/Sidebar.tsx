@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { Radio, LayoutDashboard, AlertTriangle, RadioTower, Map, ScrollText, Settings, Circle } from 'lucide-react';
 
@@ -16,6 +16,7 @@ const navItems = [
 
 export function Sidebar() {
   const pathname = usePathname();
+  const router = useRouter();
 
   return (
     <aside className="hidden md:flex flex-col w-[248px] shrink-0 border-r border-border bg-card h-screen sticky top-0">
@@ -47,6 +48,11 @@ export function Sidebar() {
             <Link
               key={item.href}
               href={item.href}
+              aria-current={isActive ? 'page' : undefined}
+              onClick={(event) => {
+                event.preventDefault();
+                router.push(item.href);
+              }}
               className={cn(
                 'flex items-center gap-2.5 rounded-md px-3 py-2 text-[13px] font-medium transition-colors',
                 isActive
@@ -87,6 +93,7 @@ export function Sidebar() {
 
 export function MobileNav({ open, onClose }: { open: boolean; onClose: () => void }) {
   const pathname = usePathname();
+  const router = useRouter();
 
   if (!open) return null;
 
@@ -120,6 +127,12 @@ export function MobileNav({ open, onClose }: { open: boolean; onClose: () => voi
               <Link
                 key={item.href}
                 href={item.href}
+                aria-current={isActive ? 'page' : undefined}
+                onClick={(event) => {
+                  event.preventDefault();
+                  router.push(item.href);
+                  onClose();
+                }}
                 className={cn(
                   'flex items-center gap-2.5 rounded-md px-3 py-2 text-[13px] font-medium transition-colors',
                   isActive
